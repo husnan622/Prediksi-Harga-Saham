@@ -1,71 +1,36 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Prediksi Harga Saham - Husnan
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+Saham adalah sebuah bukti kepemilikan nilai sebuah perusahaan, artinya pemilik saham adalah pemilik perusahaan. Semakin besar saham yang dimiliki, maka semakin besar kekuasaannya di perusahaan tersebut. Pada kesempatan ini saya membangun model LSTM untuk memprediksi harga saham. LSTM sangat berguna dalam memprediksi harga saham. Ini karena prediksi harga saham di masa depan bergantung pada harga sebelumnya.
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
-### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+### Problem Statement
+- Apa yang dapat membantu proses analisis fundamenal/pasar untuk mendukung pengambilan keputusan investasi saham?
 
 ### Goals
-
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+- Membangun model LSTM untuk memprediksi harga saham.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Pada proyek ini saya menggunakan data dari yFinance. yFinance ialah sumber terbuka yang menggunakan API Yahoo yang tersedia untuk umum, dan ditujukan untuk tujuan penelitian dan pendidikan. Bisa diakses di: [yfinance](https://pypi.org/project/yfinance/#description). 
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
-
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+### Variabel-variabel pada yFinance adalah sebagai berikut:
+- Date : Tanggal
+- Open : Harga Pembukaan
+- High : Harga tertinggi
+- Low : Harga terendah
+- Close : Harga penutupan
+- Adj Close : Harga penutupan yang disesuaikan dengan aksi korporasi seperti right issue, stock split atau stock reverse
+- Volume : Volume transaksi biasanya dalam jumlah lembar
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+Teknik data preparation yang dilakukan pada proyek ini adalah sebagai berikut:
+- Memisahkan data harga saham menjadi data training dan dan data testing.
+- Menggunakan Scikit-Learn MinMaxScaler untuk menormalkan semua data mulai dari 0 hingga 1.
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
