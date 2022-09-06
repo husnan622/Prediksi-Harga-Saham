@@ -42,3 +42,5 @@ Pada proyek ini menggunakan Tensorflow dan LSTM.
 
 - Metrik yang digunakan adalah root mean square error (RMSE) untuk memeriksa kinerja model.
 - Hasil proyek berdasarkan metrik adalah `1.3004825948431418` yang mana model bekerja dengan baik
+
+![Prediksi Saham](https://user-images.githubusercontent.com/57633103/188735701-75e8beab-ebbc-477f-be9c-68f186f907dc.png)
