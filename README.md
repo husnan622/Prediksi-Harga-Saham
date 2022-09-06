@@ -7,7 +7,7 @@ Saham adalah sebuah bukti kepemilikan nilai sebuah perusahaan, artinya pemilik s
 ## Business Understanding
 
 ### Problem Statement
-- Apa yang dapat membantu proses analisis fundamenal/pasar untuk mendukung pengambilan keputusan investasi saham?
+- Apa yang dapat membantu proses analisis fundamental/pasar untuk mendukung pengambilan keputusan investasi saham?
 
 ### Goals
 - Membangun model LSTM untuk memprediksi harga saham.
@@ -41,4 +41,4 @@ Pada proyek ini menggunakan Tensorflow dan LSTM.
 ## Evaluation
 
 - Metrik yang digunakan adalah root mean square error (RMSE) untuk memeriksa kinerja model.
-- Hasil proyek berdasarkan metrik adalah 1.3004825948431418 yang mana model bekerja dengan baik
+- Hasil proyek berdasarkan metrik adalah `1.3004825948431418` yang mana model bekerja dengan baik
