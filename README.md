@@ -55,8 +55,6 @@ stock_data.head()
 
 ## Data Preparation
 Teknik data preparation yang dilakukan pada proyek ini adalah sebagai berikut:
-- Memisahkan data harga saham menjadi data training dan dan data testing.
-- Menggunakan Scikit-Learn MinMaxScaler untuk menormalkan semua data mulai dari 0 hingga 1.
 
 ### Mempersiapkan training set
 ```python
@@ -123,16 +121,53 @@ x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
 ## Modeling
 Pada proyek ini menggunakan Tensorflow dan LSTM.
-- Menentukan model Sequential.
-- Menambahkan LSTM layer dengan memberikan beberapa network units.
-- Mengatur return sequence
-- Menambahkan Dense layer dengan memberikan beberapa network units.
-- Menggunakan optimizer "adam" dan loss function "mean square error".
-- Melatih model serta mengatur batch size dan epoch.  
+
+```python
+model = keras.Sequential()
+model.add(layers.LSTM(100, return_sequences=True, input_shape=(x_train.shape[1], 1)))
+model.add(layers.LSTM(100, return_sequences=False))
+model.add(layers.Dense(25))
+model.add(layers.Dense(1))
+model.summary()
+```
+
+**Baris 1:** 
+> Menentukan model Sequential yang terdiri dari linear stack of layers.
+
+**Baris 2:** 
+> Menambahkan lapisan LSTM dengan memberi 100 network units. Mengatur return_sequence menjadi true sehingga output dari layer akan menjadi urutan yang lain dengan panjang yang sama.
+
+**Baris 3:** 
+> Menambahkan lapisan LSTM lain dengan 100 network units. Mengatur return_sequence ke false.
+
+**Baris 4:** 
+> Menambahkan dense layer dengan 25 network units.
+
+**Baris 5:** 
+> Menambahkan dense layer yang menentukan output dari 1 network unit.
+
+**Baris 6:** 
+> Menampilkan ringkasan arsitektur LSTM.
 
 ## Evaluation
 
 - Metrik yang digunakan adalah root mean square error (RMSE) untuk memeriksa kinerja model.
 - Hasil proyek berdasarkan metrik adalah `1.3004825948431418` yang mana model bekerja dengan baik
+
+```python
+predictions = model.predict(x_test)
+predictions = scaler.inverse_transform(predictions)
+rmse = np.sqrt(np.mean(predictions - y_test)**2)
+rmse
+```
+
+**Baris 1:** 
+> 
+
+**Baris 2:** 
+> 
+
+**Baris 3-4:** 
+> 
 
 ![Prediksi Saham](https://user-images.githubusercontent.com/57633103/188735701-75e8beab-ebbc-477f-be9c-68f186f907dc.png)
