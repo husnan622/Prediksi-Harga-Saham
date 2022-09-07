@@ -151,9 +151,6 @@ model.summary()
 
 ## Evaluation
 
-- Metrik yang digunakan adalah root mean square error (RMSE) untuk memeriksa kinerja model.
-- Hasil proyek berdasarkan metrik adalah `1.3004825948431418` yang mana model bekerja dengan baik
-
 ```python
 predictions = model.predict(x_test)
 predictions = scaler.inverse_transform(predictions)
@@ -162,12 +159,12 @@ rmse
 ```
 
 **Baris 1:** 
-> 
+> Menerapkan model untuk memprediksi harga saham berdasarkan test set.
 
 **Baris 2:** 
-> 
+> Menggunakan metode inverse_transform untuk mendenormalisasi prediksi harga saham.
 
 **Baris 3-4:** 
-> 
+> Menerapkan RMSE untuk menghitung tingkat perbedaan antara harga yang diprediksi dan harga sebenarnya (y_test) dan menampilkan hasilnya.
 
 ![Prediksi Saham](https://user-images.githubusercontent.com/57633103/188735701-75e8beab-ebbc-477f-be9c-68f186f907dc.png)
