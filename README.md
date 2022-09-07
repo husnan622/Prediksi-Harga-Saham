@@ -63,6 +63,7 @@ Evaluation yang dilakukan pada proyek ini adalah sebagai berikut:
 - Menerapkan model untuk memprediksi harga saham berdasarkan test set.
 - Menggunakan metode inverse_transform untuk mendenormalisasi prediksi harga saham.
 - Menerapkan RMSE untuk menghitung tingkat perbedaan antara harga yang diprediksi dan harga sebenarnya (y_test) dan menampilkan hasilnya.
+- Hasilnya menunjukkan bahwa RMSE hanya sekitar `1.3004825948431418`. Modelnya bekerja dengan baik.
 
 ## Conclusion
 Dari grafik yang dihasilkan, kita dapat melihat prediksi harga saham mengikuti tren harga saham. Hal ini menunjukkan efektivitas LSTM bekerja dengan time series atau data sekuensial seperti harga saham.
