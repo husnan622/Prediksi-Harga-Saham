@@ -100,6 +100,26 @@ x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 > Mengkonversi data fitur (x_train) dan data label (y_train) menjadi array Numpy. kemudian membentuk kembali x_train dan y_train menjadi array tiga dimensi sebagai bagian dari persyaratan untuk melatih model LSTM.
 
 ### Mempersiapkan test set
+```python
+test_data = scaled_data[training_data_len-60: , : ]
+x_test = []
+y_test = values[training_data_len:]
+
+for i in range(60, len(test_data)):
+  x_test.append(test_data[i-60:i, 0])
+
+x_test = np.array(x_test)
+x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+```
+
+**Baris 1:** 
+> Mengekstrak closing prices dari dataset yang dinormalisasi (20% terakhir dari dataset).
+
+**Baris 2-6:** 
+> Membuat data fitur (x_test) dan data label (y_test) dari dari test set.
+
+**Baris 8-9:** 
+> Mengkonversikan data fitur (x_test) dan data label (y_test) menjadi array Numpy. Kemudian membentuk kembali x_test dan y_test menjadi array tiga dimensi.
 
 ## Modeling
 Pada proyek ini menggunakan Tensorflow dan LSTM.
