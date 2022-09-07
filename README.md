@@ -174,4 +174,4 @@ Dari grafik yang dihasilkan, kita dapat melihat prediksi harga saham mengikuti t
 
 ## Reference
 1. [Long Short Term Memory Network](https://algorit.ma/blog/lstm-network-adalah-2022/)
-2. [ARTI HARGA OPEN, HIGH, LOW DAN CLOSE DI ANALISIS TEKNIKAL]([https://algorit.ma/blog/lstm-network-adalah-2022/](https://sahamology.id/arti-harga-open-harga-high-harga-low-dan-harga-close-dalam-analisis-teknikal/))
+2. [Arti Harga Open, High, Low Dan Close Di Analisis Teknikal](https://sahamology.id/arti-harga-open-harga-high-harga-low-dan-harga-close-dalam-analisis-teknikal/)
