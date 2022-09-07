@@ -167,4 +167,11 @@ rmse
 **Baris 3-4:** 
 > Menerapkan RMSE untuk menghitung tingkat perbedaan antara harga yang diprediksi dan harga sebenarnya (y_test) dan menampilkan hasilnya.
 
+## Conclusion
+Dari grafik yang dihasilkan, kita dapat melihat prediksi harga saham mengikuti tren harga saham. Hal ini menunjukkan efektivitas LSTM bekerja dengan time series atau data sekuensial seperti harga saham.
+
 ![Prediksi Saham](https://user-images.githubusercontent.com/57633103/188735701-75e8beab-ebbc-477f-be9c-68f186f907dc.png)
+
+## Reference
+1. [Long Short Term Memory Network](https://algorit.ma/blog/lstm-network-adalah-2022/)
+2. [ARTI HARGA OPEN, HIGH, LOW DAN CLOSE DI ANALISIS TEKNIKAL]([https://algorit.ma/blog/lstm-network-adalah-2022/](https://sahamology.id/arti-harga-open-harga-high-harga-low-dan-harga-close-dalam-analisis-teknikal/))
